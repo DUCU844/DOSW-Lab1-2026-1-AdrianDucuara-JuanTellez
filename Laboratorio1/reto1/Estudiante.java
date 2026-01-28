@@ -1,3 +1,5 @@
+package reto1;
+
 public class Estudiante{
     private String nombre;
     private int edad;
@@ -15,15 +17,15 @@ public class Estudiante{
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public int getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public String getCorreo() {
+        return correo;
+    }
+
+    public int getSemestre(){
+        return semestre;
     }
 }
