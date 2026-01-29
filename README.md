@@ -13,7 +13,7 @@
 ![Captura](imagenes/reto1_config.png)
 
 **Descripción:**
-
+En este reto implementamos un sistema de bienvenida utilizando programación funcional en Java. El objetivo fue crear un mensaje personalizado que presenta a los integrantes del equipo usando expresiones lambda y streams.
 
 
 ---
