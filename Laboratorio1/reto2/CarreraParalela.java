@@ -15,7 +15,7 @@ public class CarreraParalela {
                 .get();
     }
 
-    public static void combinacionResultados(ArrayList<Integer> numeros){
+    public static void compararResultados (ArrayList<Integer> numeros){
 
     }
 
