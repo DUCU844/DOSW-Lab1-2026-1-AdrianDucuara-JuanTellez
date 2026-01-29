@@ -46,6 +46,13 @@ public class CarreraParalela {
         System.out.println("Cantidad de datos ingresados: " + totalDatos);
 
         compararResultados(numeros);
+
+
+        String datosPar = (cantidadNumeros % 2 == 0)?
+                "La cantidad de datos es par" :
+                "La cantidad de dator es impar";
+
+        System.out.println(datosPar);
     }
 
 }
