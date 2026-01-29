@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class CarreraParalela {
     private static ArrayList<Integer> numeros= new ArrayList<>();
-    private int numeroMax;
+
 
     public int calcularNumeroMaximo (ArrayList<Integer> numeros){
         return numeros.stream()
@@ -18,14 +18,18 @@ public class CarreraParalela {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Inicio de la Carrera en Paralelo");
-        System.out.println("Cuantos numeros deseas ingresar: ");
+        System.out.printf("Cuantos numeros deseas ingresar: ");
         int cantidadNumeros = input.nextInt();
 
         for (int i = 0; i<cantidadNumeros; i++ ){
-            System.out.println("Ingrese el numero: ");
+            System.out.printf("Ingrese el numero: ");
             numeros.add(input.nextInt());
         }
 
+        long totalDatos = numeros.stream().count();
+        int numeroMin = numeros.stream().min(Integer::compare).get();
+        System.out.println("El numero minimo es: " + numeroMin);
+        System.out.println("Cantidad de datos ingresados: " + totalDatos);
     }
 
 }
