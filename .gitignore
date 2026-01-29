@@ -29,3 +29,8 @@ replay_pid*
 
 # Compilados
 out/
+target/
+
+# Windows
+desktop.ini
+
