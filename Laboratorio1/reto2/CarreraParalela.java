@@ -15,6 +15,10 @@ public class CarreraParalela {
                 .get();
     }
 
+    public static void compararResultados (ArrayList<Integer> numeros){
+
+    }
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Inicio de la Carrera en Paralelo");
