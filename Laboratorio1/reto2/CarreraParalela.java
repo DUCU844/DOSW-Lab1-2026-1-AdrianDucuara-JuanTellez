@@ -9,14 +9,24 @@ public class CarreraParalela {
     private static ArrayList<Integer> numeros= new ArrayList<>();
 
 
-    public int calcularNumeroMaximo (ArrayList<Integer> numeros){
+    public static int calcularNumeroMaximo (ArrayList<Integer> numeros){
         return numeros.stream()
                 .max(Integer::compare)
                 .get();
     }
+    public static int calcularNumeroMinimo(ArrayList<Integer> numeros ){
+        return numeros.stream()
+                .min(Integer::compare)
+                .get();
+    }
 
     public static void compararResultados (ArrayList<Integer> numeros){
+        int maximo = calcularNumeroMaximo(numeros);
 
+        String resultado = (maximo % 2 == 0) ?
+                "El numero mayor es par" :
+                "El numero mayor es impar";
+        System.out.println(resultado);
     }
 
     public static void main(String[] args) {
@@ -31,9 +41,18 @@ public class CarreraParalela {
         }
 
         long totalDatos = numeros.stream().count();
-        int numeroMin = numeros.stream().min(Integer::compare).get();
-        System.out.println("El numero minimo es: " + numeroMin);
+
+        System.out.println("El numero minimo es: " + calcularNumeroMinimo(numeros));
         System.out.println("Cantidad de datos ingresados: " + totalDatos);
+
+        compararResultados(numeros);
+
+
+        String datosPar = (cantidadNumeros % 2 == 0)?
+                "La cantidad de datos es par" :
+                "La cantidad de dator es impar";
+
+        System.out.println(datosPar);
     }
 
 }
