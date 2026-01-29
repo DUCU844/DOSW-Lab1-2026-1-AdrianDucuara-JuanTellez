@@ -28,9 +28,9 @@ public class CarreraParalela {
                 "El numero mayor no es multiplo de dos";
         System.out.println(resultadoVueltaDosCarrilUno);
 
-        String resultadoVueltaDosCarrilDos = (2 % maximo == 0) ?
+        String resultadoVueltaDosCarrilDos = (maximo == 0) ? "division por 0 no esta definida" : ((2 % maximo == 0) ?
                 "El numero mayor es divisor de dos" :
-                "El numero mayor no es divisor de dos";
+                "El numero mayor no es divisor de dos");
         System.out.println(resultadoVueltaDosCarrilDos);
     }
 
