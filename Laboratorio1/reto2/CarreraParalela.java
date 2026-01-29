@@ -23,10 +23,15 @@ public class CarreraParalela {
     public static void compararResultados (ArrayList<Integer> numeros){
         int maximo = calcularNumeroMaximo(numeros);
 
-        String resultado = (maximo % 2 == 0) ?
-                "El numero mayor es par" :
-                "El numero mayor es impar";
-        System.out.println(resultado);
+        String resultadoVueltaDosCarrilUno = (maximo % 2 == 0) ?
+                "El numero mayor es multiplo de dos" :
+                "El numero mayor no es multiplo de dos";
+        System.out.println(resultadoVueltaDosCarrilUno);
+
+        String resultadoVueltaDosCarrilDos = (2 % maximo == 0) ?
+                "El numero mayor es divisor de dos" :
+                "El numero mayor no es divisor de dos";
+        System.out.println(resultadoVueltaDosCarrilDos);
     }
 
     public static void main(String[] args) {
