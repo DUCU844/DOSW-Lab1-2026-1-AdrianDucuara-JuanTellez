@@ -53,11 +53,11 @@ public class CarreraParalela {
         compararResultados(numeros);
 
 
-        String datosPar = (cantidadNumeros % 2 == 0)?
-                "La cantidad de datos es par" :
-                "La cantidad de dator es impar";
+        String datosImpar = (cantidadNumeros % 2 != 0)?
+                "La cantidad de dator es impar":
+                "La cantidad de datos es par";
 
-        System.out.println(datosPar);
+        System.out.println(datosImpar);
     }
 
 }
