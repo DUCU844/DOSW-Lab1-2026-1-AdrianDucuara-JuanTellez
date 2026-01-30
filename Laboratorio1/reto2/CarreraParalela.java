@@ -6,7 +6,8 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 public class CarreraParalela {
-    private static ArrayList<Integer> numeros= new ArrayList<>();
+    private static ArrayList<Integer> lista1= new ArrayList<>();
+    private static ArrayList<Integer> lista2= new ArrayList<>();
 
 
     public static int calcularNumeroMaximo (ArrayList<Integer> numeros){
@@ -20,44 +21,41 @@ public class CarreraParalela {
                 .get();
     }
 
-    public static void compararResultados (ArrayList<Integer> numeros){
-        int maximo = calcularNumeroMaximo(numeros);
+    public static Resultado analizarLista(ArrayList<Integer> lista1, ArrayList<Integer> lista2){
+        Resultado r = new Resultado();
+        r.maximo1 = lista1.stream()
+                .max(Integer::compare)
+                .get();
 
-        String resultadoVueltaDosCarrilUno = (maximo % 2 == 0) ?
-                "El numero mayor es multiplo de dos" :
-                "El numero mayor no es multiplo de dos";
-        System.out.println(resultadoVueltaDosCarrilUno);
+        r.minimo1 = lista1.stream()
+                .min(Integer::compare)
+                .get();
 
-        String resultadoVueltaDosCarrilDos = (maximo == 0) ? "division por 0 no esta definida" : ((2 % maximo == 0) ?
-                "El numero mayor es divisor de dos" :
-                "El numero mayor no es divisor de dos");
-        System.out.println(resultadoVueltaDosCarrilDos);
+        r.cantidad1 = lista1.stream().mapToInt(Integer::intValue).sum();
+
+        r.es1MultiploDe2 = (r.max1 % 2 == 0);
+        r.es1DivisorDe2 = (2 % r.max1 == 0);
+        r.cantidad1Par = (r.cantidad1 % 2 == 0);
+
+        r.maximo2 = lista1.stream()
+                .max(Integer::compare)
+                .get();
+
+        r.minimo2 = lista1.stream()
+                .min(Integer::compare)
+                .get();
+
+        r.cantidad2 = lista1.stream().mapToInt(Integer::intValue).sum();
+
+        r.es2MultiploDe2 = (r.max1 % 2 == 0);
+        r.es2DivisorDe2 = (2 % r.max1 == 0);
+        r.cantidad2Par = (r.cantidad1 % 2 == 0);
+
+        return r;
     }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Inicio de la Carrera en Paralelo");
-        System.out.printf("Cuantos numeros deseas ingresar: ");
-        int cantidadNumeros = input.nextInt();
 
-        for (int i = 0; i<cantidadNumeros; i++ ){
-            System.out.printf("Ingrese el numero: ");
-            numeros.add(input.nextInt());
-        }
-
-        long totalDatos = numeros.stream().count();
-
-        System.out.println("El numero minimo es: " + calcularNumeroMinimo(numeros));
-        System.out.println("Cantidad de datos ingresados: " + totalDatos);
-
-        compararResultados(numeros);
-
-
-        String datosImpar = (cantidadNumeros % 2 != 0)?
-                "La cantidad de dator es impar":
-                "La cantidad de datos es par";
-
-        System.out.println(datosImpar);
     }
 
 }
