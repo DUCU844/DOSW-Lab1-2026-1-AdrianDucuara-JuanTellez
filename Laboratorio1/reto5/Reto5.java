@@ -5,7 +5,6 @@ import java.util.Set;
 import java.util.Random;
 import java.util.TreeSet;
 
-
 public class Reto5 {
 
     public static Set<Integer> procesarHashSet(int cantidad, int rango) {
@@ -52,6 +51,7 @@ public class Reto5 {
 
         return union;
     }
+
 
     public static void main(String[] args) {
         Set<Integer> guerrerosA = procesarHashSet(5, 10);
