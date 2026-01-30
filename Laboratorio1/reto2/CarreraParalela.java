@@ -62,15 +62,15 @@ public class CarreraParalela {
 
         for (int i = 0; i<cantidadNumeros; i++ ){
             System.out.println("Ingrese el numero: ");
-
+            numeros.add(input.nextInt());
         }
 
+        long totalDatos = numeros.stream().count();
 
+        System.out.println("El numero minimo es: " + calcularNumeroMinimo(numeros));
+        System.out.println("Cantidad de datos ingresados: " + totalDatos);
 
-
-
-
-
+        compararResultados(numeros);
 
         String datosPar = (cantidadNumeros % 2 == 0)?
                 "La cantidad de datos es par":
