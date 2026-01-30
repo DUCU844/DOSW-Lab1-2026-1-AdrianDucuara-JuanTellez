@@ -60,6 +60,20 @@ Eliminar los multiplos de 5 en el TreeSet
 ---
 
 
+### Reto 6: La maquina de decisiones
+**Evidencia:**
+
+![Captura](imagenes/reto6_output.png)
+
+
+**Descripción:**
+En este reto teniamos que implementar lo que le faltaba al manual de una maquina encontrada en el laboratorio secreto de la Escuela
+en donde teniamos que imprementar metodos usando switch-case para que la maquina pueda revelar todo su poder.
+
+
+---
+
+
 ## Preguntas teóricas
 
 - Pregunta 1: 
