@@ -10,25 +10,20 @@ public class Reto6 {
     public static void ejecutarComando(String comando) {
 
         switch (comando) {
-            case "BROMEAR":
-                System.out.println("La máquina ríe: ¿Por qué la RAM rompió con la CPU? Porque necesitaba espacio…");
+            case "SALUDAR":
+                System.out.println("La máquina dice: ¡Saludos, viajero del Tiempo y del código!");
                 break;
-            case "GRITAR":
-                System.out.println("La máquina grita: ¡¡¡ALERTA DE STACK OVERFLOW!!!");
+            case "DESPEDIR":
+                System.out.println("La máquina dice: Que los bits te acompañen, hasta la próxima misión.");
                 break;
-            case "SUSURRAR":
-                System.out.println("La máquina susurra: Shhh… los bugs están dormidos");
+            case "CANTAR":
+                System.out.println("La máquina canta: 01010101");
                 break;
-            case "ANALIZAR":
-                System.out.println("La máquina procesa: Analizando datos… resultado: ¡Eres increíble programando!");
+            case "DANZAR":
+                System.out.println("La máquina gira y emite chispas: Girando en modo fiesta.");
                 break;
             default:
                 System.out.println("Comando no reconocido");
-
         }
-    }
-
-    public static void main(String[] args) {
-        comandos.put("SALUDAR", () -> {});
     }
 }
