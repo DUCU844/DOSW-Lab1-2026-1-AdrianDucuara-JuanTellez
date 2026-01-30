@@ -1,21 +1,31 @@
 package reto3;
 
-public class Reto3{
+import java.util.stream.IntStream;
+
+public class Reto3 {
 
     public static StringBuilder transformarMensaje(String mensaje) {
 
-        String repetido = java.util.stream.IntStream.range(0, 3)
+        String repetido = IntStream.range(0, 3)
                 .mapToObj(i -> mensaje)
                 .reduce((a, b) -> a + " " + b)
                 .orElse("");
 
-        StringBuilder sb = new StringBuilder(repetido);
-        return sb.reverse();
+        String invertido = new StringBuilder(mensaje).reverse().toString();
+
+        return new StringBuilder(repetido + "\n" + invertido);
+    }
+
+
+    @FunctionalInterface
+    interface Transformador {
+        StringBuilder transformar(String mensaje);
     }
 
     public static void main(String[] args) {
-        StringBuilder mensajeRepetido = MensajeRepetido("Hola");
-        System.out.println(mensajeRepetido);
+        Transformador t = (msg) -> transformarMensaje(msg);
 
+        StringBuilder resultado = t.transformar("Hola");
+        System.out.println(resultado);
     }
 }
