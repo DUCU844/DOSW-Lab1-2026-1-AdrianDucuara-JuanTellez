@@ -2,7 +2,6 @@ package reto3;
 
 public class Reto3{
     private static StringBuilder sb;
-    private static StringBuffer sbf;
 
     public static StringBuilder MensajeRepetido(String mensaje){
         sb = new StringBuilder(mensaje);
@@ -12,8 +11,14 @@ public class Reto3{
         return sb;
     }
 
-    public static StringBuffer MensajeInvertido(String mensaje){
-        sbf = new StringBuffer(mensaje);
+    public static StringBuffer transformarMensaje(String mensaje) {
+
+        String repetido = java.util.stream.IntStream.range(0, 3)
+                .mapToObj(i -> mensaje)
+                .reduce((a, b) -> a + " " + b)
+                .orElse("");
+
+        StringBuffer sbf = new StringBuffer(repetido);
         return sbf.reverse();
     }
 
