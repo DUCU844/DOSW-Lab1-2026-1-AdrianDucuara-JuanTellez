@@ -11,7 +11,10 @@ public class Reto3 {
                 .reduce((a, b) -> a + " " + b)
                 .orElse("");
 
-        return new StringBuilder(repetido).reverse();
+
+        String invertido = new StringBuilder(mensaje).reverse().toString();
+
+        return new StringBuilder(repetido + "\n" + invertido);
     }
 
     @FunctionalInterface
