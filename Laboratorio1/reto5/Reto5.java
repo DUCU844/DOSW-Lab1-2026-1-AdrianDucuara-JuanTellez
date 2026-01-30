@@ -5,7 +5,6 @@ import java.util.Set;
 import java.util.Random;
 import java.util.TreeSet;
 
-
 public class Reto5 {
 
     public static Set<Integer> procesarHashSet(int cantidad, int rango) {
@@ -16,11 +15,12 @@ public class Reto5 {
             inicial.add(random.nextInt(rango) + 1);
         }
 
-        System.out.println("HashSet original: " + inicial);
+        System.out.println("HashSet: " + inicial);
 
         Set<Integer> sinMultiplosDe3 = inicial.stream()
                 .filter(n -> n % 3 != 0)
                 .collect(HashSet::new, HashSet::add, HashSet::addAll);
+
 
         return sinMultiplosDe3;
     }
@@ -33,7 +33,7 @@ public class Reto5 {
             inicial.add(random.nextInt(rango) + 1);
         }
 
-        System.out.println("TreeSet original (ordenado): " + inicial);
+        System.out.println("TreeSet: " + inicial);
 
         Set<Integer> sinMultiplosDe5 = inicial.stream()
                 .filter(n -> n % 5 != 0)
@@ -42,8 +42,23 @@ public class Reto5 {
         return sinMultiplosDe5;
     }
 
+    public static Set<Integer> choque(Set<Integer> hashSet, Set<Integer>treeSet) {
+        Set<Integer> union = new TreeSet<>();
+        union.addAll(hashSet);
+        union.addAll(treeSet);
+
+        System.out.println("Union: " + union);
+
+        return union;
+    }
+
     public static void main(String[] args) {
-        System.out.println("Resultado HashSet: " + procesarHashSet(10, 100));
-        System.out.println("Resultado TreeSet: " + procesarTreeSet(10, 100));
+        Set<Integer> guerrerosA = procesarHashSet(5, 10);
+        Set<Integer> guerrerosB = procesarTreeSet(5, 10);
+
+        Set<Integer> arena = choque(guerrerosA, guerrerosB);
+
+        arena.stream()
+                .forEach(n -> System.out.println("numero en arena: " + n));
     }
 }
