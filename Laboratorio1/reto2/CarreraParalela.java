@@ -37,11 +37,11 @@ public class CarreraParalela {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Inicio de la Carrera en Paralelo");
-        System.out.printf("Cuantos numeros deseas ingresar: ");
+        System.out.println("Cuantos numeros deseas ingresar: ");
         int cantidadNumeros = input.nextInt();
 
         for (int i = 0; i<cantidadNumeros; i++ ){
-            System.out.printf("Ingrese el numero: ");
+            System.out.println("Ingrese el numero: ");
             numeros.add(input.nextInt());
         }
 
