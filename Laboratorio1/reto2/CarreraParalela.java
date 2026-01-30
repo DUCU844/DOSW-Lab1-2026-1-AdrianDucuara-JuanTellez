@@ -55,7 +55,34 @@ public class CarreraParalela {
     }
 
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Inicio de la Carrera en Paralelo");
+        System.out.println("Cuantos numeros deseas ingresar: ");
+        int cantidadNumeros = input.nextInt();
 
+        for (int i = 0; i<cantidadNumeros; i++ ){
+            System.out.println("Ingrese el numero: ");
+
+        }
+
+
+
+
+
+
+
+
+        String datosPar = (cantidadNumeros % 2 == 0)?
+                "La cantidad de datos es par":
+                "La cantidad de dator es impar";
+
+        System.out.println(datosPar);
+
+        String datosImpar = (cantidadNumeros % 2 != 0)?
+                "La cantidad de dator es impar":
+                "La cantidad de datos es par";
+
+        System.out.println(datosImpar);
     }
 
 }
