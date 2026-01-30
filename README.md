@@ -31,6 +31,18 @@ En este reto nos enfretamos a una carrera en paralelo donde ambos teniamos que c
 
 ---
 
+### Reto 3: Eco Misterioso
+**Evidencia:**
+![Captura](imagenes/reto3_output.png)
+
+
+**Descripción:**
+En este reto se trabajó el manejo de cadenas de texto en Java utilizando StringBuilder y StringBuffer. La solución final consistió en unificar ambas implementaciones en una sola función que 
+repite un mensaje tres veces utilizando Stream(), muestra el resultado intermedio en consola, invierte el mensaje resultante usando StringBuilder y
+retorna el mensaje final invertido.
+
+---
+
 ## Preguntas teóricas
 
 - Pregunta 1: 
