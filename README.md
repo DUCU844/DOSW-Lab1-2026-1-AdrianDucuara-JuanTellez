@@ -43,6 +43,23 @@ retorna el mensaje final invertido.
 
 ---
 
+
+### Reto 5: Batalla de Conjuntos
+**Evidencia:**
+
+![Captura](imagenes/reto5_output.png)
+
+
+**Descripción:**
+En este reto simulabamos una arena donde un equipo lucha sin orden(HashSet) y otro con orden natural(TreeSet), donde al final teniamos que unir los
+dos equipos cumpliendo los siguientes requisitos:
+Eliminar los multiplos de 3 en el HashSet
+Eliminar los multiplos de 5 en el TreeSet
+
+
+---
+
+
 ## Preguntas teóricas
 
 - Pregunta 1: 
