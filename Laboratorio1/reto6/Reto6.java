@@ -26,4 +26,8 @@ public class Reto6 {
                 System.out.println("Comando no reconocido");
         }
     }
+
+    public static void main(String[] args) {
+
+    }
 }
