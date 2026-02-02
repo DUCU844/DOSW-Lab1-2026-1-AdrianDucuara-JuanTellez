@@ -15,6 +15,18 @@ public class Reto4 {
 
         return mapa;
     }
+
+    public static Map<String, Integer> crearHashTable(List<Map.Entry<String, Integer>> datos) {
+        Hashtable<String, Integer> mapa = new Hashtable<>();
+
+        for (Map.Entry<String, Integer> entry : datos) {
+            mapa.putIfAbsent(entry.getKey(), entry.getValue());
+        }
+
+        return mapa;
+
+    }
+
     public static Map<String, Integer> combinarMapas(
             Map<String, Integer> hashMap,
             Hashtable<String, Integer> hashTable) {
