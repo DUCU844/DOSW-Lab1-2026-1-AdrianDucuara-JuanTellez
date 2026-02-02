@@ -15,11 +15,23 @@ public class Reto4 {
 
         return mapa;
     }
+
+    public static Map<String, Integer> crearHashTable(List<Map.Entry<String, Integer>> datos) {
+
+        Map<String, Integer> mapa = new TreeMap<>();
+
+        for (Map.Entry<String, Integer> entry : datos) {
+            mapa.putIfAbsent(entry.getKey(), entry.getValue());
+        }
+
+        return mapa;
+    }
+
     public static Map<String, Integer> combinarMapas(
             Map<String, Integer> hashMap,
             Hashtable<String, Integer> hashTable) {
 
-        Map<String, Integer> resultado = new HashMap<>();
+        Map<String, Integer> resultado = new Hashtable<>();
 
         resultado.putAll(hashMap);
 
@@ -33,6 +45,12 @@ public class Reto4 {
         mapa.forEach((k, v) ->
                 System.out.println("Clave: " + k.toUpperCase() + " | Valor: " + v)
         );
+    }
+
+    public static void imprimirOrdenado(Map<String, Integer> mapa) {
+        mapa.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .forEach(e -> System.out.println(e.getKey() + ": " + e.getValue()));
     }
 
     public static void main(String[] args) {
