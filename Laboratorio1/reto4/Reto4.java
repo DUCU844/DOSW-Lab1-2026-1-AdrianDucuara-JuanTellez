@@ -31,9 +31,9 @@ public class Reto4 {
             Map<String, Integer> hashMap,
             Hashtable<String, Integer> hashTable) {
 
-        Map<String, Integer> resultado = new HashMap<>();
+        Hashtable<String, Integer> resultado = new Hashtable<>();
 
-        resultado.putAll(hashMap);
+        resultado.putAll(hashTable);
 
         hashMap.forEach((k, v) ->
                 resultado.put(k.toUpperCase(), v)
