@@ -18,7 +18,7 @@ public class Reto4 {
 
     public static Map<String, Integer> crearHashTable(List<Map.Entry<String, Integer>> datos) {
 
-        Map<String, Integer> mapa = new TreeMap<>();
+        Map<String, Integer> mapa = new Hashtable<>();
 
         for (Map.Entry<String, Integer> entry : datos) {
             mapa.putIfAbsent(entry.getKey(), entry.getValue());
@@ -31,7 +31,7 @@ public class Reto4 {
             Map<String, Integer> hashMap,
             Hashtable<String, Integer> hashTable) {
 
-        Map<String, Integer> resultado = new Hashtable<>();
+        Map<String, Integer> resultado = new HashMap<>();
 
         resultado.putAll(hashMap);
 
