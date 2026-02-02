@@ -2,6 +2,7 @@ package reto4;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Reto4 {
 
@@ -27,17 +28,32 @@ public class Reto4 {
         return mapa;
     }
 
-    public static Map<String, Integer> combinarMapas(
+    public static void combinarMapas(
             Map<String, Integer> hashMap,
             Hashtable<String, Integer> hashTable) {
 
-        Map<String, Integer> resultado = new Hashtable<>();
+        Map<String, Integer> combinado =
+                Stream.concat(hashMap.entrySet().stream(),
+                                hashTable.entrySet().stream())
+                        .collect(Collectors.toMap(
+                                Map.Entry::getKey,
+                                Map.Entry::getValue,
+                                (v1, v2) -> v2
+                        ));
 
-        resultado.putAll(hashMap);
+        System.out.println("CLAVES EN MAYÚSCULAS");
+        imprimirEnMayusculas(combinado);
 
-        hashTable.forEach(resultado::put);
-
-        return resultado;
+        System.out.println("ORDEN ASCENDENTE");
+        imprimirOrdenado(
+                combinado.entrySet().stream()
+                        .collect(Collectors.toMap(
+                                e -> e.getKey().toUpperCase(),
+                                Map.Entry::getValue,
+                                (v1, v2) -> v2,
+                                TreeMap::new
+                        ))
+        );
     }
 
     public static void imprimirEnMayusculas(Map<String, Integer> mapa) {
@@ -70,9 +86,7 @@ public class Reto4 {
         hashTable.put("oro", 12);
         hashTable.put("esmeralda", 6);
 
-        Map<String, Integer> combinado = combinarMapas(hashMap, hashTable);
-
-        imprimirEnMayusculas(combinado);
+        combinarMapas(hashMap, hashTable);
     }
 
 
