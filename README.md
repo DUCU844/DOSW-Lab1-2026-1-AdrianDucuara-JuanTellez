@@ -8,7 +8,7 @@
 
 ## Retos completados
 
-### Reto 1: Configuración y creación de rama 
+### Reto 1: Configuración y creación de rama
 **Evidencia:**
 
 ![Captura](imagenes/reto1_config.png)
@@ -38,9 +38,24 @@ En este reto nos enfretamos a una carrera en paralelo donde ambos teniamos que c
 
 
 **Descripción:**
-En este reto se trabajó el manejo de cadenas de texto en Java utilizando StringBuilder y StringBuffer. La solución final consistió en unificar ambas implementaciones en una sola función que 
+En este reto se trabajó el manejo de cadenas de texto en Java utilizando StringBuilder y StringBuffer. La solución final consistió en unificar ambas implementaciones en una sola función que
 repite un mensaje tres veces utilizando Stream(), muestra el resultado intermedio en consola, invierte el mensaje resultante usando StringBuilder y
 retorna el mensaje final invertido.
+
+---
+
+
+### Reto 4: El tesoro de las llaves duplicadas
+**Evidencia:**
+
+![Captura](imagenes/reto4_main.png)
+
+![Captura](imagenes/reto4_output.png)
+
+
+**Descripción:**
+En este reto debemos reclamar un tesoro el problema es el mapa esta dividido en dos partes, una parte rapida y sin proteccion (HashMap) en la que se encargara Adrian y la otra parte mas lenta, pero esta blindada contra ataques de hilos (HashTable) de la cual se encargara Juan. Para poder
+al final debemos crear un metodo el cual combine ambos mapas dandole prioridad al HashMap imprimiendo las claves del mapa en mayusculas y en orden ascendente.
 
 ---
 
@@ -145,5 +160,18 @@ Tendremos una frecuencia de trabajo de al menos una hora por dia.
 Cuando se presente un conflicto o desacuerdo se discutira la posicion actual de cada uno y sus justificiones para llegar a un acuerdo.
 
 ### Compromisos frente a entregas y calidad
-Nos comprometemos a entregar la mayor parte del laboratorio manteniendo las buenas practicas 
+Nos comprometemos a entregar la mayor parte del laboratorio manteniendo las buenas practicas.
+
+---
+
+
+## Hojas de vida
+
+### Juan Tellez
+
+![Captura](imagenes/HV_Juan.png)
+
+### Adrian Ducuara
+
+![Captura](imagenes/HV_Adrian.jpg)
 
