@@ -35,7 +35,9 @@ public class Reto4 {
 
         resultado.putAll(hashMap);
 
-        hashTable.forEach(resultado::put);
+        hashMap.forEach((k, v) ->
+                resultado.put(k.toUpperCase(), v)
+        );;
 
         return resultado;
     }
@@ -45,6 +47,12 @@ public class Reto4 {
         mapa.forEach((k, v) ->
                 System.out.println("Clave: " + k.toUpperCase() + " | Valor: " + v)
         );
+    }
+
+    public static void imprimirOrdenado(Map<String, Integer> mapa) {
+        mapa.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .forEach(e -> System.out.println(e.getKey() + ": " + e.getValue()));
     }
 
     public static void main(String[] args) {
