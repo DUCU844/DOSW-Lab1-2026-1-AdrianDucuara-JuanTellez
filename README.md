@@ -145,5 +145,18 @@ Tendremos una frecuencia de trabajo de al menos una hora por dia.
 Cuando se presente un conflicto o desacuerdo se discutira la posicion actual de cada uno y sus justificiones para llegar a un acuerdo.
 
 ### Compromisos frente a entregas y calidad
-Nos comprometemos a entregar la mayor parte del laboratorio manteniendo las buenas practicas 
+Nos comprometemos a entregar la mayor parte del laboratorio manteniendo las buenas practicas.
+
+---
+
+
+## Hojas de vida
+
+### Juan Tellez
+
+![Captura](imagenes/HV_Juan.png)
+
+### Adrian Ducuara
+
+![Captura](imagenes/HV_Adrian.png)
 
